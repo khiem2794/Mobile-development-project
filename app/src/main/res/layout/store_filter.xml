@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#f5f5f5"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:labelFor="@+id/city_spn"
+            android:layout_margin="12dp"
+            android:gravity="center_horizontal"
+            android:textColor="#546e7a"
+            android:text="City"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:labelFor="@+id/district_spn"
+            android:layout_margin="12dp"
+            android:gravity="center_horizontal"
+            android:textColor="#546e7a"
+            android:text="District"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:labelFor="@+id/brand_spn"
+            android:layout_margin="12dp"
+            android:gravity="center_horizontal"
+            android:textColor="#546e7a"
+            android:text="Brand"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="12dp"
+            android:id="@+id/city_spn"
+            android:spinnerMode="dropdown"
+            android:background="@drawable/spinner_style"
+            android:popupBackground="#cfd8dc"
+            style="@android:style/Widget.Spinner"/>
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="12dp"
+            android:id="@+id/district_spn"
+            android:spinnerMode="dropdown"
+            android:background="@drawable/spinner_style"
+            android:popupBackground="#cfd8dc"
+            style="@android:style/Widget.Spinner"/>
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="12dp"
+            android:id="@+id/brand_spn"
+            android:spinnerMode="dropdown"
+            android:background="@drawable/spinner_style"
+            android:popupBackground="#cfd8dc"
+            style="@android:style/Widget.Spinner"/>
+
+    </LinearLayout>
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        app:mrl_rippleHover="true"
+        app:mrl_rippleDelayClick="true"
+        app:mrl_rippleColor="@color/colorAccent"
+        app:mrl_rippleRoundedCorners="6dp"
+        app:mrl_rippleDuration="300"
+        app:mrl_rippleAlpha="1"
+        app:mrl_rippleFadeDuration="100">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/filter_btn"
+            android:textSize="16sp"
+            android:textColor="#546e7a"
+            android:text="Filter"
+            android:background="@drawable/spinner_style"/>
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+</LinearLayout>

@@ -1,0 +1,160 @@
+<com.flipboard.bottomsheet.BottomSheetLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomsheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#eeeeee"
+            android:orientation="vertical"
+            android:layout_above="@+id/toolbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignBottom="@+id/title_tv"
+                    android:layout_alignTop="@+id/title_tv"
+                    android:paddingRight="4dp"
+                    android:src="@drawable/ic_settings_white_24dp"
+                    android:id="@+id/setting_btn"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:id="@+id/title_tv"
+                    android:text="Stores"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/backgroundColor"/>
+            </RelativeLayout>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="6dp"
+                android:id="@+id/stores_lv"
+                android:scrollbars="none"
+                android:padding="6dp"
+                android:background="@drawable/stores_list_style"/>
+        </LinearLayout>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimaryDark"
+            android:layout_alignParentBottom="true"
+            app:contentInsetStart="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetEnd="0dp"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:orientation="horizontal">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="?attr/actionBarSize"
+                    app:mrl_rippleDelayClick="true"
+                    app:mrl_rippleColor="@color/colorAccent"
+                    app:mrl_rippleDuration="250"
+                    app:mrl_rippleAlpha="1"
+                    app:mrl_rippleFadeDuration="100">
+
+                    <ImageView
+                        android:id="@+id/search_nearest_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_near_me_white_48dp" />
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    app:mrl_rippleDelayClick="true"
+                    app:mrl_rippleColor="@color/colorAccent"
+                    app:mrl_rippleDuration="250"
+                    app:mrl_rippleAlpha="1"
+                    app:mrl_rippleFadeDuration="100">
+
+                    <ImageView
+                        android:id="@+id/store_filter_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_filter_list_white_48dp"/>
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    app:mrl_rippleDelayClick="true"
+                    app:mrl_rippleColor="@color/colorAccent"
+                    app:mrl_rippleDuration="250"
+                    app:mrl_rippleAlpha="1"
+                    app:mrl_rippleFadeDuration="100">
+
+                    <ImageView
+                        android:id="@+id/switch_to_map_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="center"
+                        android:src="@android:drawable/ic_dialog_map"/>
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/start_layout"
+            android:background="#cc000000">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="42sp"
+                android:typeface="sans"
+                android:text="Tap to search"/>
+
+        </LinearLayout>
+
+</RelativeLayout>
+
+</com.flipboard.bottomsheet.BottomSheetLayout>
+
+

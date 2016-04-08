@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="VI-EN">
+<head>
+	<!-- Author : Artiel _ 06/03/2016 -->
+	<title>Congratulation Secrect for their Major Chapion</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="api.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script type="text/javascript">
+	function syntaxHighlight(json) {
+		if (typeof json != 'string') {
+			json = JSON.stringify(json, undefined, 2);
+		}
+		json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+		return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+			var cls = 'number';
+			if (/^"/.test(match)) {
+				if (/:$/.test(match)) {
+					cls = 'key';
+				} else {
+					cls = 'string';
+				}
+			} else if (/true|false/.test(match)) {
+				cls = 'boolean';
+			} else if (/null/.test(match)) {
+				cls = 'null';
+			}
+			return '<span class="' + cls + '">' + match + '</span>';
+		});
+	}
+	$(document).ready(function(){
+		//starting here
+		$("#submit").click(function() {
+		    var url = "path/to/your/script.php"; // the script where you handle the form input.
+		    var _kd = $('#lat').val();
+		    var _vd = $('#long').val();
+		    var api = "http://maps.googleapis.com/maps/api/geocode/json?latlng=" + _kd + "," + _vd +"&sensor=false";
+		    //window.location.assign(api);
+		    $.ajax({
+		    	type: "GET",
+		    	url: api,
+		        //data: 0; //$("#idForm").serialize(), // serializes the form's elements.
+		        success: function(data)
+		        {
+		        	//var s = JSON.parse(data)
+		        	//var local = data[0];
+		        	
+		            var str = JSON.stringify(data, null, 2);
+		            var json = JSON.parse(str);
+		            var status = json.status;
+		            if(status == "OK") {
+		            	var st = JSON.stringify(json.results[0].formatted_address, null, 2);
+		            	$('#adr').html(st);
+		            }
+		            else {
+		            	$('#adr').html("Không tìm thấy kết quả");
+		            }
+		            
+
+		            //alert('d');
+		            //$('#right').html(syntaxHighlight(str)); // show response from the php script.
+		        }
+		    });
+
+		    //e.preventDefault(); // avoid to execute the actual submit of the form.
+	    });
+	});
+
+	</script>
+</head>
+<body>
+	<div id="top">
+	</div>
+	<div id="left">
+		<div class="st">
+			Kinh độ:<br>
+			<input type="text" name="cor1" id="lat" value="10.771466"><br>
+			Vĩ độ:<br>
+			<input type="text" name="cor2" id="long" value="106.657835"><br><br>
+			<button id="submit">Submit</button>
+		</div>
+	</div>
+	<div id="right">
+		<p>Địa chỉ tìm được :</p>
+		<div id="adr"></div>
+	</div>
+</body>
+</html>

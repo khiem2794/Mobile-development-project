@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="android.findstoreapp.StoreInfo">
+
+    <LinearLayout
+        android:id="@+id/background_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.35"
+            android:background="@color/backgroundColor"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.65"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/brand_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Circle K"
+        android:textStyle="bold"
+        android:textSize="42sp"
+        android:padding="24dp"/>
+
+    <ImageView
+        android:id="@+id/brand_logo_imv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/brand_name_tv"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/circlek"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/brand_logo_imv"
+        android:layout_marginTop="6dp"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/store_address_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:text="Địa chỉ: 36 Hai Bà Trưng, Quận 1, TPHCM" />
+
+        <TextView
+            android:id="@+id/kind_of_items_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/store_address_tv"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="6dp"
+            android:text="Các loại mặt hàng:"/>
+
+        <View
+            android:id="@+id/line_break_v"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_below="@+id/kind_of_items_tv"
+            android:layout_alignRight="@+id/kind_of_items_tv"
+            android:layout_alignLeft="@+id/kind_of_items_tv"
+            android:layout_marginTop="6dp"
+            android:background="#9e9e9e"/>
+
+        <GridView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_break_v"
+            android:id="@+id/items_list_gv"
+            android:numColumns="auto_fit"
+            android:layout_marginTop="12dp"
+            android:verticalSpacing="6dp"
+            android:horizontalSpacing="6dp"
+            android:listSelector="#00000000"
+            android:fadeScrollbars="false">
+
+        </GridView>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/ic_dialog_map" />
+
+</RelativeLayout>
