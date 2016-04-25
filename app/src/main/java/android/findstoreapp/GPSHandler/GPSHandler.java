@@ -78,7 +78,7 @@ public class GPSHandler extends Service implements LocationListener {
                 if (isGPSEnabled) {
                     if (location == null) {
                         int permissionCheck = ContextCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_FINE_LOCATION);
-                        if (permissionCheck == PermissionChecker.PERMISSION_GRANTED){
+                        if (permissionCheck == PermissionChecker.PERMISSION_GRANTED) {
                             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, MIN_TIME_BW_UPDATES, MIN_DISTANCE_CHANGE_FOR_UPDATES, this);
                             Log.d("GPS Enabled", "GPS Enabled");
                             if (locationManager != null) {

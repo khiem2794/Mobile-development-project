@@ -9,6 +9,8 @@ import android.findstoreapp.DataStructure.Store;
 import android.findstoreapp.GPSHandler.GPSHandler;
 import android.findstoreapp.adapter.StoresListAdapter;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.annotation.UiThread;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -21,6 +23,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -30,7 +33,7 @@ import java.util.ArrayList;
 
 public class ListDisplay extends AppCompatActivity {
     public ImageView switchToMapBtn, searchNearestBtn, storeFilterBtn, settingBtn;
-    public LinearLayout startLayout;
+    public RelativeLayout startLayout;
     public BottomSheetLayout bottomSheet;
     public ListView storesLV;
     public View filerView;
@@ -39,13 +42,16 @@ public class ListDisplay extends AppCompatActivity {
     private ArrayList<Store> storeList = new ArrayList<>();
     private ArrayList<Store> searchResult = new ArrayList<>();
     private StoresListAdapter adapter;
+    private float latitude, longitude;
+    private GPSHandler gpsHandler;
+    private Handler handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_display);
 
-        startLayout = (LinearLayout) findViewById(R.id.start_layout);
+        startLayout = (RelativeLayout) findViewById(R.id.start_layout);
 
         bottomSheet = (BottomSheetLayout) findViewById(R.id.bottomsheet);
 
@@ -171,24 +177,30 @@ public class ListDisplay extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                final GPSHandler gpsHandler = new GPSHandler(ListDisplay.this);
-                float latitude = 0;
-                float longitude = 0;
+                gpsHandler = new GPSHandler(ListDisplay.this);
                 if (gpsHandler.canGetLocation()) {
                     latitude = (float) gpsHandler.getLatitude();
                     longitude = (float) gpsHandler.getLongitude();
-                    Toast.makeText(ListDisplay.this, "Lat: " + latitude + "  Long: " + longitude, Toast.LENGTH_SHORT).show();
+                    if ((int) latitude == (int) longitude && (int) latitude == 0) {
+                        handler.postDelayed(keepGetGPS, 1200);
+                        Toast.makeText(ListDisplay.this, "Finding stores...", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(ListDisplay.this, "Lat: " + latitude + "  Long: " + longitude, Toast.LENGTH_SHORT).show();
+                    } else {
+                        ArrayList<Store> stores = Search.searchNearest(latitude, longitude, getApplicationContext());
+                        if (stores.size() == 0) {
+                            Toast.makeText(FindStoreApplication.getAplicationContext(), "No founded store in this area. You should want to update your data and try again.", Toast.LENGTH_SHORT).show();
+                        } else {
+                            handler.removeCallbacks(keepGetGPS);
+                            gpsHandler.stopUsingGPS();
+                            updateStoresList(stores);
+                            initializeSpinner1();
+                            initializeSpinner2();
+                            initializeSpinner3();
+                        }
+                    }
+
                 } else {
                     gpsHandler.showSettingsAlert();
-                }
-                ArrayList<Store> stores = Search.searchNearest(latitude, longitude, getApplicationContext());
-                if (stores.size() == 0) {
-                    Toast.makeText(FindStoreApplication.getAplicationContext(), "NO STORES FOUND IN THIS AREA OR YOUR DB IS EMPTY, PLEASE UPDATE IF SO", Toast.LENGTH_SHORT).show();
-                } else {
-                    updateStoresList(stores);
-                    initializeSpinner1();
-                    initializeSpinner2();
-                    initializeSpinner3();
                 }
             }
         });
@@ -258,4 +270,11 @@ public class ListDisplay extends AppCompatActivity {
         arrayAdapter.setDropDownViewResource(R.layout.spiner_dropdown_item);
         brandSpn.setAdapter(arrayAdapter);
     }
+
+    private final Runnable keepGetGPS = new Runnable() {
+        @Override
+        public void run() {
+            searchNearestBtn.performClick();
+        }
+    };
 }

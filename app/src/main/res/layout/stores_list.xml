@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:mrl_rippleDelayClick="true"
-    app:mrl_rippleColor="#81c784"
+    app:mrl_rippleColor="@color/colorAccent"
     app:mrl_rippleDuration="250"
     app:mrl_rippleAlpha="1"
     app:mrl_rippleFadeDuration="100"
@@ -13,70 +13,66 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="6dp">
+        android:layout_height="@dimen/list_item_height"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="@dimen/avatar_list_item_radius"
+            android:layout_height="@dimen/avatar_list_item_radius"
             android:id="@+id/brand_logo_imv"
-            android:src="@drawable/circlek"
-            android:layout_alignParentLeft="true"
-            android:layout_marginRight="12dp" />
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:src="@drawable/circlek" />
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/brand_logo_imv"
-            android:layout_above="@+id/kilometer_tv"
-            android:gravity="bottom"
-            android:textStyle="bold"
-            android:textSize="30sp"
-            android:text="5.6"
-            android:id="@+id/distance_from_me_tv"
-            android:layout_alignParentRight="true"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/brand_logo_imv"
-            android:gravity="center_horizontal"
-            android:id="@+id/kilometer_tv"
-            android:textStyle="bold"
-            android:text="km"
-            android:textSize="12sp"
-            android:paddingBottom="6dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignLeft="@+id/distance_from_me_tv"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/brand_logo_imv"
-            android:layout_alignTop="@+id/brand_logo_imv"
-            android:gravity="center_vertical"
+            android:layout_height="36dp"
             android:id="@+id/brand_name_tv"
             android:textSize="18sp"
-            android:textStyle="bold"
+            android:layout_toRightOf="@+id/brand_logo_imv"
+            android:layout_alignParentTop="true"
+            android:paddingTop="@dimen/activity_horizontal_margin"
             android:text="Circle K"
-            android:paddingTop="6dp"
-            android:layout_toLeftOf="@+id/distance_from_me_tv"
-            android:layout_toStartOf="@+id/distance_from_me_tv" />
+            android:textStyle="bold"/>
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/brand_logo_imv"
-            android:layout_below="@+id/brand_name_tv"
-            android:layout_alignBottom="@+id/brand_logo_imv"
-            android:gravity="top"
+            android:layout_height="36dp"
             android:id="@+id/store_address_tv"
             android:textSize="12sp"
-            android:textStyle="normal"
-            android:text="36 Hai Bà Trưng"
-            android:layout_toLeftOf="@+id/distance_from_me_tv"
-            android:layout_toStartOf="@+id/distance_from_me_tv" />
+            android:paddingTop="2dp"
+            android:layout_below="@+id/brand_name_tv"
+            android:layout_toRightOf="@+id/brand_logo_imv"
+            android:layout_alignBottom="@+id/brand_logo_imv"
+            android:layout_alignParentBottom="true"
+            android:text="36 Hai Bà Trưng" />
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/distance_from_me_tv"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:text="5.6" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:id="@+id/kilometer_tv"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:text="km"
+                android:textSize="12sp" />
+
+        </LinearLayout>
     </RelativeLayout>
 </com.balysv.materialripple.MaterialRippleLayout>

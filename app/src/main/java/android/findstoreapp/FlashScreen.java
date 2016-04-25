@@ -15,13 +15,11 @@ import android.widget.Toast;
 public class FlashScreen extends AppCompatActivity {
 
     private final static int SPLASH_TIME = 3000;
-    public static ImageView backgroundImV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.flash_screen);
-        backgroundImV = (ImageView) findViewById(R.id.flash_screen_background);
         new BackgroundTask().execute();
     }
 
@@ -53,7 +51,6 @@ public class FlashScreen extends AppCompatActivity {
             *
             *  intent.putExtra("data_key", data_value);
             * */
-            backgroundImV.setImageResource(R.drawable.flash_screen_background2);
             startActivity(intent);
             finish();
         }

@@ -83,7 +83,7 @@ public class StoresListAdapter extends BaseAdapter {
             default:
                 brandLogoImV.setImageResource(R.drawable.circlek);
         }
-        DecimalFormat format = new DecimalFormat("#.#");
-        distanceFromMeTv.setText(String.valueOf(format.format(s.getDistance())));
+        String distance = String.format("%.1f", s.getDistance());
+        distanceFromMeTv.setText(distance.replace(",", "."));
     }
 }

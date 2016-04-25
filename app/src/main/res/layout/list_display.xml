@@ -19,7 +19,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/toolbar_height"
                 android:background="@color/colorPrimary">
 
                 <ImageView
@@ -28,18 +28,16 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignBottom="@+id/title_tv"
                     android:layout_alignTop="@+id/title_tv"
-                    android:paddingRight="4dp"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
                     android:src="@drawable/ic_settings_white_24dp"
                     android:id="@+id/setting_btn"/>
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:gravity="center"
                     android:id="@+id/title_tv"
                     android:text="Stores"
-                    android:paddingTop="6dp"
-                    android:paddingBottom="6dp"
                     android:textSize="24sp"
                     android:textStyle="bold"
                     android:textColor="@color/backgroundColor"/>
@@ -48,18 +46,15 @@
             <ListView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="6dp"
                 android:id="@+id/stores_lv"
-                android:scrollbars="none"
-                android:padding="6dp"
-                android:background="@drawable/stores_list_style"/>
+                android:scrollbars="none"/>
         </LinearLayout>
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimaryDark"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@color/colorPrimary"
             android:layout_alignParentBottom="true"
             app:contentInsetStart="0dp"
             app:contentInsetLeft="0dp"
@@ -134,26 +129,9 @@
 
         </android.support.v7.widget.Toolbar>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:id="@+id/start_layout"
-            android:background="#cc000000">
+        <include layout="@layout/content_cover_list_display" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:textColor="#fff"
-                android:textSize="42sp"
-                android:typeface="sans"
-                android:text="Tap to search"/>
-
-        </LinearLayout>
-
-</RelativeLayout>
+    </RelativeLayout>
 
 </com.flipboard.bottomsheet.BottomSheetLayout>
 
