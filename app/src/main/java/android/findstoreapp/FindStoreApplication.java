@@ -21,9 +21,12 @@ public class FindStoreApplication extends Application {
     private void customizeRange(Context context) {
        DatabaseHandler db = new DatabaseHandler(context);
         int range = Integer.parseInt(db.getMinimumSetting());
+        Setting.CURRENT_DISTANCE = range;
         if(range > Setting.MAXIMUM_DISTANCE) {
             db.setMinimumSetting(Setting.DEFAULT_DISTANCE);
+            Setting.CURRENT_DISTANCE = Setting.DEFAULT_DISTANCE;
         }
+        db.closeDB();
     }
 
     public static FindStoreApplication getInstance() {

@@ -45,11 +45,13 @@ public class ListDisplay extends AppCompatActivity {
     private float latitude, longitude;
     private GPSHandler gpsHandler;
     private Handler handler = new Handler();
+    private int timeOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_display);
+        timeOut = 0;
 
         startLayout = (RelativeLayout) findViewById(R.id.start_layout);
 
@@ -182,13 +184,18 @@ public class ListDisplay extends AppCompatActivity {
                     latitude = (float) gpsHandler.getLatitude();
                     longitude = (float) gpsHandler.getLongitude();
                     if ((int) latitude == (int) longitude && (int) latitude == 0) {
-                        handler.postDelayed(keepGetGPS, 1200);
-                        Toast.makeText(ListDisplay.this, "Finding stores...", Toast.LENGTH_SHORT).show();
+                        if (timeOut < 10) {
+                            handler.postDelayed(keepGetGPS, 1200);
+                            Toast.makeText(ListDisplay.this, "Finding store...", Toast.LENGTH_SHORT).show();
+                        } else {
+                            gpsHandler.stopUsingGPS();
+                            Toast.makeText(ListDisplay.this, "Can not find your location. Please try again later", Toast.LENGTH_SHORT).show();
+                        }
                         //Toast.makeText(ListDisplay.this, "Lat: " + latitude + "  Long: " + longitude, Toast.LENGTH_SHORT).show();
                     } else {
                         ArrayList<Store> stores = Search.searchNearest(latitude, longitude, getApplicationContext());
                         if (stores.size() == 0) {
-                            Toast.makeText(FindStoreApplication.getAplicationContext(), "No founded store in this area. You should want to update your data and try again.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(FindStoreApplication.getAplicationContext(), "Not found any stores in this area. You should want to update your data and try again.", Toast.LENGTH_SHORT).show();
                         } else {
                             handler.removeCallbacks(keepGetGPS);
                             gpsHandler.stopUsingGPS();
@@ -274,6 +281,7 @@ public class ListDisplay extends AppCompatActivity {
     private final Runnable keepGetGPS = new Runnable() {
         @Override
         public void run() {
+            timeOut += 2;
             searchNearestBtn.performClick();
         }
     };

@@ -6,6 +6,7 @@ public class Setting extends Base{
     public static String MINIMUM_DISTANCE = "minimum_distance";
     public static int DEFAULT_DISTANCE = 5;
     public static int MAXIMUM_DISTANCE = 20;
+    public static int CURRENT_DISTANCE = 0; // only available when app start
     public Setting(String name, long value) {
         super(name);
         this.value = value;

@@ -1,7 +1,8 @@
 package android.findstoreapp;
 
 import android.content.Intent;
-import android.findstoreapp.DataStructure.StaticValue;
+import android.findstoreapp.DataStructure.*;
+import android.findstoreapp.DataStructure.Setting;
 import android.findstoreapp.GPSHandler.GPSHandler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentActivity;
@@ -91,15 +92,13 @@ public class MapDisplay extends FragmentActivity implements OnMapReadyCallback {
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-
-
         if (status) {
-
             if (stores.size() == 1) {
                 googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
                         new LatLng(Double.valueOf(latitudes.get(0)), Double.valueOf(longitudes.get(0))), 16));
             } else {
-                googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(myLatitude, myLongitude), 15));
+                int zoomLens = dynamicZoom();
+                googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(myLatitude, myLongitude), zoomLens));
             }
             googleMap.addMarker(new MarkerOptions()
                     .position(new LatLng(myLatitude, myLongitude))
@@ -122,5 +121,11 @@ public class MapDisplay extends FragmentActivity implements OnMapReadyCallback {
                         .title(stores.get(i)));
             }
         }
+    }
+
+    private int dynamicZoom() {
+        int range = Setting.CURRENT_DISTANCE;
+
+        return 15 - (range / 4);
     }
 }

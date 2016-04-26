@@ -79,8 +79,8 @@ public class Setting extends AppCompatActivity {
         });
 
         builder = new AlertDialog.Builder(Setting.this);
-        builder.setMessage("Update data?")
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        builder.setTitle("Update data")
+                .setPositiveButton("Update", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         StringRequest stringRequest = new StringRequest(Request.Method.GET, "https://storefinder.firebaseio.com/Brands.json", new Response.Listener<String>() {
@@ -109,7 +109,8 @@ public class Setting extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.cancel();
                     }
-                });
+                })
+                .setIcon(R.drawable.ic_info_outline_black_24dp);
     }
 
     @Override
@@ -138,6 +139,7 @@ public class Setting extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         db.setMinimumSetting(range);
+        android.findstoreapp.DataStructure.Setting.CURRENT_DISTANCE = range; // update for zoom on google map
         super.onBackPressed();
     }
 }

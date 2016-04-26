@@ -5,6 +5,7 @@ import android.app.Service;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.findstoreapp.R;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -66,8 +67,7 @@ public class GPSHandler extends Service implements LocationListener {
                     locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, MIN_TIME_BW_UPDATES, MIN_DISTANCE_CHANGE_FOR_UPDATES, this);
 
                     if (locationManager != null) {
-                        location = locationManager
-                                .getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+                        location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
                         if (location != null) {
                             latitude = location.getLatitude();
                             longitude = location.getLongitude();
@@ -107,7 +107,8 @@ public class GPSHandler extends Service implements LocationListener {
     public void stopUsingGPS() {
         if (locationManager != null) {
             int permissionCheck = ContextCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_FINE_LOCATION);
-            locationManager.removeUpdates(GPSHandler.this);
+            locationManager.removeUpdates(this);
+            locationManager = null;
         }
     }
 
@@ -170,7 +171,7 @@ public class GPSHandler extends Service implements LocationListener {
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();
             }
-        });
+        }).setIcon(R.drawable.ic_info_outline_black_24dp);
 
         // Showing Alert Message
         alertDialog.show();
