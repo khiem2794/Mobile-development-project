@@ -7,7 +7,7 @@
         android:id="@+id/flash_screen_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/flash_screen_background1"
+        android:src="@drawable/flash_screen"
         android:scaleType="centerCrop"/>
 
     <LinearLayout
