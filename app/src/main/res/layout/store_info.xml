@@ -29,7 +29,7 @@
         android:text="Circle K"
         android:textStyle="bold"
         android:textSize="42sp"
-        android:padding="24dp"/>
+        android:padding="24dp" />
 
     <ImageView
         android:id="@+id/brand_logo_imv"
@@ -37,7 +37,7 @@
         android:layout_height="150dp"
         android:layout_below="@+id/brand_name_tv"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/circlek"/>
+        android:src="@drawable/circlek" />
 
     <RelativeLayout
         android:layout_width="match_parent"

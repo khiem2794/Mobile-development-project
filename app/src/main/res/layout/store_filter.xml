@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:layout_height="match_parent"
+    android:layout_height="240dp"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
@@ -20,7 +20,7 @@
             android:labelFor="@+id/city_spn"
             android:layout_margin="12dp"
             android:gravity="center_horizontal"
-            android:textColor="#546e7a"
+            android:textColor="@color/buttonTextColor"
             android:text="City"/>
 
         <TextView
@@ -30,7 +30,7 @@
             android:labelFor="@+id/district_spn"
             android:layout_margin="12dp"
             android:gravity="center_horizontal"
-            android:textColor="#546e7a"
+            android:textColor="@color/buttonTextColor"
             android:text="District"/>
 
         <TextView
@@ -40,7 +40,7 @@
             android:labelFor="@+id/brand_spn"
             android:layout_margin="12dp"
             android:gravity="center_horizontal"
-            android:textColor="#546e7a"
+            android:textColor="@color/buttonTextColor"
             android:text="Brand"/>
 
     </LinearLayout>
@@ -58,7 +58,7 @@
             android:id="@+id/city_spn"
             android:spinnerMode="dropdown"
             android:background="@drawable/spinner_style"
-            android:popupBackground="#cfd8dc"
+            android:popupBackground="#EEEEEE"
             style="@android:style/Widget.Spinner"/>
 
         <Spinner
@@ -69,7 +69,7 @@
             android:id="@+id/district_spn"
             android:spinnerMode="dropdown"
             android:background="@drawable/spinner_style"
-            android:popupBackground="#cfd8dc"
+            android:popupBackground="#EEEEEE"
             style="@android:style/Widget.Spinner"/>
 
         <Spinner
@@ -80,7 +80,7 @@
             android:id="@+id/brand_spn"
             android:spinnerMode="dropdown"
             android:background="@drawable/spinner_style"
-            android:popupBackground="#cfd8dc"
+            android:popupBackground="#EEEEEE"
             style="@android:style/Widget.Spinner"/>
 
     </LinearLayout>
@@ -102,8 +102,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/filter_btn"
             android:textSize="16sp"
-            android:textColor="#546e7a"
+            android:textColor="@color/buttonTextColor"
             android:text="Filter"
+            android:textAllCaps="false"
             android:background="@drawable/spinner_style"/>
 
     </com.balysv.materialripple.MaterialRippleLayout>

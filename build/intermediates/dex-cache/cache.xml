@@ -2,102 +2,109 @@
 <items version="2" >
 
     <item
-        jar="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
-        <dex dex="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/pre-dexed/debug/classes-b5723da8ddbcd996264510dbe13478e0c9e87176.jar" />
-    </item>
-    <item
-        jar="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/2.0.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="031e8b3ab2df4ab43b1017f84417d7e10dfbb8d2">
-        <dex dex="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/pre-dexed/debug/classes-d38995108f6cf4697a06a0014c443d457768d443.jar" />
-    </item>
-    <item
-        jar="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
-        <dex dex="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/pre-dexed/debug/classes-41b4e59c1fcc2a15b58b8c14cf7e196b4bdf1348.jar" />
-    </item>
-    <item
-        jar="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
-        <dex dex="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/pre-dexed/debug/classes-1ee18468c8a378916cc548c2e65922341ca9cf5a.jar" />
-    </item>
-    <item
-        jar="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
-        <dex dex="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/pre-dexed/debug/classes-7ab952a9f2af863110700e565832cbade2a17609.jar" />
-    </item>
-    <item
-        jar="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
-        <dex dex="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/pre-dexed/debug/classes-d6129ce9a2df11ff2fdc7cb9757add529fad8c64.jar" />
-    </item>
-    <item
-        jar="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/exploded-aar/com.balysv/material-ripple/1.0.2/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="c733e9d1b065d940a08f2fca0ff920dfc08d94cc">
-        <dex dex="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/pre-dexed/debug/classes-01a42e8d63ef5a891f9252ad4fcb4395bb9968ff.jar" />
-    </item>
-    <item
-        jar="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
-        <dex dex="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-7365551cdbfe5af774c925afbbfc238fdf481ca1.jar" />
-    </item>
-    <item
-        jar="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/exploded-aar/com.appyvet/materialrangebar/1.3/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="8eb551963af29c7faacd640a4e74a8e9e698ab90">
-        <dex dex="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/pre-dexed/debug/classes-9a0c419855947c722d33c6254437111ffaad5f2a.jar" />
-    </item>
-    <item
-        jar="/home/ngockhiem27/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
-        <dex dex="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-0dfa76f7119c349bf0d3c80d146421e809e69001.jar" />
-    </item>
-    <item
-        jar="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/exploded-aar/com.flipboard/bottomsheet-core/1.5.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="b35ffb2308ce7a075a91fb6eac4a345dc05ce699">
-        <dex dex="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/pre-dexed/debug/classes-e7616dacc96ed0d66483bfd190daf6fc250838fb.jar" />
-    </item>
-    <item
-        jar="/home/ngockhiem27/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.19/a8f23f65fc1e522ee4a1a697ee569901a46741fa/library-1.0.19.jar"
+        jar="C:\Users\kiddy_000\.gradle\caches\modules-2\files-2.1\com.mcxiaoke.volley\library\1.0.19\a8f23f65fc1e522ee4a1a697ee569901a46741fa\library-1.0.19.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="a8f23f65fc1e522ee4a1a697ee569901a46741fa">
-        <dex dex="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/pre-dexed/debug/library-1.0.19-8a7fae2a095566d4a3949dca2f12175f4c32ce92.jar" />
+        <dex dex="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\pre-dexed\debug\library-1.0.19-2261df641ea6aab01cc0270dde45a5b0650ae1c0.jar" />
     </item>
     <item
-        jar="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jar="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\exploded-aar\com.pnikosis\materialish-progress\1.7\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="41a4edf3c43fdbce6eba27da50b17ff9933987f1">
+        <dex dex="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\pre-dexed\debug\classes-a7601510a6ee62de3d924ac3492d846f7f37afea.jar" />
+    </item>
+    <item
+        jar="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1-3f36e8c258679b451bfcb9f761a8731c372287d3.jar" />
+    </item>
+    <item
+        jar="E:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1-aa5c5cff6a92560fa20d72dfd632fd3c7d00957e.jar" />
+    </item>
+    <item
+        jar="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="5c5699834e9722f1c288fea2de82725d078ba127">
-        <dex dex="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/pre-dexed/debug/classes-3cbb9c53fc8d868ad5025f0dd7bcb73d0a0cab3e.jar" />
+        <dex dex="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\pre-dexed\debug\classes-11bd1af6e38b08a32f3d500a6395613ab48e3678.jar" />
     </item>
     <item
-        jar="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/8.4.0/jars/classes.jar"
+        jar="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\exploded-aar\com.appyvet\materialrangebar\1.3\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8eb551963af29c7faacd640a4e74a8e9e698ab90">
+        <dex dex="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\pre-dexed\debug\classes-a099ffdd8c3265981b63fe195c02cc8c6f910331.jar" />
+    </item>
+    <item
+        jar="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\pre-dexed\debug\classes-8efd3f435e6d75696edab4b0cfbbc18590103c1c.jar" />
+    </item>
+    <item
+        jar="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\pre-dexed\debug\classes-f5548c8f476993ec8710ba01ea9272b8e7d4efcf.jar" />
+    </item>
+    <item
+        jar="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\pre-dexed\debug\classes-2116957a106ecdc2056620f6b8e47957c459d57f.jar" />
+    </item>
+    <item
+        jar="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\pre-dexed\debug\classes-2b0828600ebfe15da4b6f6d0371a6f8560d9c1f4.jar" />
+    </item>
+    <item
+        jar="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\exploded-aar\com.balysv\material-ripple\1.0.2\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="c733e9d1b065d940a08f2fca0ff920dfc08d94cc">
+        <dex dex="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\pre-dexed\debug\classes-f18e752452d75af8cb21b51ac872d0e48291b14a.jar" />
+    </item>
+    <item
+        jar="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\pre-dexed\debug\classes-baae505ea150c8e9d79712651a9a6d67687544c3.jar" />
+    </item>
+    <item
+        jar="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\2.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="031e8b3ab2df4ab43b1017f84417d7e10dfbb8d2">
+        <dex dex="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\pre-dexed\debug\classes-d9ce1028c61cc6d399f9cbe938212fcf46c619e9.jar" />
+    </item>
+    <item
+        jar="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\exploded-aar\com.flipboard\bottomsheet-core\1.5.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="b35ffb2308ce7a075a91fb6eac4a345dc05ce699">
+        <dex dex="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\pre-dexed\debug\classes-10257f521165bf235cf89631374de7d20168e2a2.jar" />
+    </item>
+    <item
+        jar="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.4.0\jars\classes.jar"
         jumboMode="false"
         revision="23.0.2"
         sha1="04de44f90606c77f3b28cf44861f306290505aac">
-        <dex dex="/home/ngockhiem27/Desktop/Mobile Development/app/build/intermediates/pre-dexed/debug/classes-72cd7707fdc37a4c73c78d5574e9ad991f5c5cd9.jar" />
+        <dex dex="C:\Users\kiddy_000\AndroidStudioProjects\Mobile-development-project\app\build\intermediates\pre-dexed\debug\classes-0ba585c8254d4c33f4a9bd13acba6f9c40cc2246.jar" />
     </item>
 
 </items>
