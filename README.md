@@ -1,10 +1,10 @@
-## Mobile development project - UltimateNinjaDefense
+## Mobile development project - SpaceStore
 
 ### Members
-1.  Đàm Ngọc Khiêm
-2.  Nguyễn Thành Hiếu
-3.  Lê Minh Hiếu
-4.  Trần Văn Hiệp
+1.  51201669 - Đàm Ngọc Khiêm
+2.  51201100 - Nguyễn Thành Hiếu
+3.  51201078 - Lê Minh Hiếu
+4.  51201168 - Trần Văn Hiệp
 
 ### Project description
 
