@@ -271,6 +271,19 @@ public class ListDisplay extends AppCompatActivity {
         ArrayAdapter arrayAdapter = new ArrayAdapter(filerView.getContext(), R.layout.spinner_item, districts);
         arrayAdapter.setDropDownViewResource(R.layout.spiner_dropdown_item);
         districtSpn.setAdapter(arrayAdapter);
+        try {
+            Field popup = Spinner.class.getDeclaredField("mPopup");
+            popup.setAccessible(true);
+
+            // Get private mPopup member variable and try cast to ListPopupWindow
+            android.widget.ListPopupWindow popupWindow = (android.widget.ListPopupWindow) popup.get(districtSpn);
+
+            // Set popupWindow height to 500px
+            popupWindow.setHeight(400);
+        }
+        catch (NoClassDefFoundError | ClassCastException | NoSuchFieldException | IllegalAccessException e) {
+            // silently fail...
+        }
     }
 
     private void initializeSpinner2() {
@@ -279,6 +292,19 @@ public class ListDisplay extends AppCompatActivity {
         ArrayAdapter arrayAdapter = new ArrayAdapter(filerView.getContext(), R.layout.spinner_item, citys);
         arrayAdapter.setDropDownViewResource(R.layout.spiner_dropdown_item);
         citySpn.setAdapter(arrayAdapter);
+        try {
+            Field popup = Spinner.class.getDeclaredField("mPopup");
+            popup.setAccessible(true);
+
+            // Get private mPopup member variable and try cast to ListPopupWindow
+            android.widget.ListPopupWindow popupWindow = (android.widget.ListPopupWindow) popup.get(citySpn);
+
+            // Set popupWindow height to 500px
+            popupWindow.setHeight(400);
+        }
+        catch (NoClassDefFoundError | ClassCastException | NoSuchFieldException | IllegalAccessException e) {
+            // silently fail...
+        }
     }
 
     private void initializeSpinner3() {
@@ -287,6 +313,19 @@ public class ListDisplay extends AppCompatActivity {
         ArrayAdapter arrayAdapter = new ArrayAdapter(filerView.getContext(), R.layout.spinner_item, brands);
         arrayAdapter.setDropDownViewResource(R.layout.spiner_dropdown_item);
         brandSpn.setAdapter(arrayAdapter);
+        try {
+            Field popup = Spinner.class.getDeclaredField("mPopup");
+            popup.setAccessible(true);
+
+            // Get private mPopup member variable and try cast to ListPopupWindow
+            android.widget.ListPopupWindow popupWindow = (android.widget.ListPopupWindow) popup.get(brandSpn);
+
+            // Set popupWindow height to 500px
+            popupWindow.setHeight(400);
+        }
+        catch (NoClassDefFoundError | ClassCastException | NoSuchFieldException | IllegalAccessException e) {
+            // silently fail...
+        }
     }
 
     private final Runnable keepGetGPS = new Runnable() {

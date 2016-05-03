@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Filter {
-    public static final String SHOW_ALL = "---";
+    public static final String SHOW_ALL = "Select";
 
     public static ArrayList<Store> filterByCity(ArrayList<Store> stores, String cityCon){
         ArrayList<Store> result = new ArrayList<>();
