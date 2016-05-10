@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:layout_height="240dp"
+    android:layout_height="200dp"
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#f5f5f5"
+    android:background="#FAFAFA"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_height="56dp"
+        android:background="#F5F5F5"
         android:orientation="horizontal">
 
         <TextView
@@ -18,8 +18,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:labelFor="@+id/city_spn"
-            android:layout_margin="12dp"
-            android:gravity="center_horizontal"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="16sp"
             android:textColor="@color/buttonTextColor"
             android:text="City"/>
 
@@ -28,8 +29,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:labelFor="@+id/district_spn"
-            android:layout_margin="12dp"
-            android:gravity="center_horizontal"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="16sp"
             android:textColor="@color/buttonTextColor"
             android:text="District"/>
 
@@ -38,8 +40,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:labelFor="@+id/brand_spn"
-            android:layout_margin="12dp"
-            android:gravity="center_horizontal"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="16sp"
             android:textColor="@color/buttonTextColor"
             android:text="Brand"/>
 
@@ -48,16 +51,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:orientation="horizontal">
 
         <Spinner
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="12dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
             android:id="@+id/city_spn"
             android:spinnerMode="dropdown"
             android:background="@drawable/spinner_style"
+            android:scrollbars="vertical"
             android:popupBackground="#EEEEEE"
             style="@android:style/Widget.Spinner"/>
 
@@ -65,10 +71,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="12dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
             android:id="@+id/district_spn"
             android:spinnerMode="dropdown"
             android:background="@drawable/spinner_style"
+            android:scrollbars="vertical"
             android:popupBackground="#EEEEEE"
             style="@android:style/Widget.Spinner"/>
 
@@ -76,10 +84,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="12dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
             android:id="@+id/brand_spn"
             android:spinnerMode="dropdown"
             android:background="@drawable/spinner_style"
+            android:scrollbars="vertical"
             android:popupBackground="#EEEEEE"
             style="@android:style/Widget.Spinner"/>
 
@@ -88,7 +98,10 @@
     <com.balysv.materialripple.MaterialRippleLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="12dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
         app:mrl_rippleHover="true"
         app:mrl_rippleDelayClick="true"
         app:mrl_rippleColor="@color/colorAccent"

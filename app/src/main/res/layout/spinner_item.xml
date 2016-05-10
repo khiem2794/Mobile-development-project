@@ -3,6 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:textSize="16sp"
+    android:lines="1"
+    android:textSize="14sp"
     android:gravity="center"
-    android:textColor="#546e7a" />
+    android:drawableEnd="@drawable/ic_arrow_drop_down_black_18dp"
+    android:paddingEnd="@dimen/dropdown_icon_padding"
+    android:paddingStart="@dimen/dropdown_icon_padding"
+    android:drawableTint="@color/buttonTextColor"
+    android:textColor="@color/buttonTextColor" />

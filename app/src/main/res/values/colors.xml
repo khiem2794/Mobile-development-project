@@ -9,4 +9,5 @@
     <color name="stockColor">#00695c</color>
     <color name="buttonTextColor">#9E9E9E</color>
     <color name="buttonBackgroundColor">#EEEEEE</color>
+    <color name="lineBreakColor">#9E9E9E</color>
 </resources>

@@ -7,4 +7,5 @@
     <dimen name="list_item_height">72dp</dimen>
     <dimen name="avatar_list_item_radius">40dp</dimen>
     <dimen name="app_bar_elevation">4dp</dimen>
+    <dimen name="dropdown_icon_padding">2dp</dimen>
 </resources>
